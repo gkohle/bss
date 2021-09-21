@@ -15,22 +15,17 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 		
 	</p>
 <script>
-if (typeof(Storage) !== undefined) {
-    var Image = new Array();
+var Image = new Array();
     Image[0] = "https://drive.google.com/uc?export=view&id=1vXMUJG0a0PBpk5m2fXcIrQ-GZ-x9VKJq";//pfad
     Image[1] = "https://drive.google.com/uc?export=view&id=1k86UKPfCciCcn4n5RZH-g2j00IxXih0k";//baughn
     Image[2] = "https://drive.google.com/uc?export=view&id=1kFDAkdMVvD9RGvp8xQhMn4oTBqW6dgjV";//name
     Image[3] = "https://drive.google.com/uc?export=view&id=1ecarbURyovaL-Oy4M8KCDXitnm9zO7kK";//name
-    if (!localStorage.imgIndex) {
-     	  localStorage.imgIndex = 0;
-    		} else {
-     	  localStorage.imgIndex = (localStorage.imgIndex >= (Image.length-1)) ? 0: parseInt(localStorage.imgIndex)+1;
-    		}
-    document.getElementById('myImg').src = Image[localStorage.imgIndex];
-	} else {
-    //LocalStorage not supported with this browser
-	}
+  
+	
+var imgIndex = Math.floor( Math.random() * 3 );	
+document.getElementById('myImg').src = Image[localStorage.imgIndex];
+	
 </script>
- 
+
 </body>
 </html>
