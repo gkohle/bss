@@ -76,11 +76,11 @@ if (typeof(Storage) !== undefined) {
     		} else {
      	  localStorage.imgIndex = (localStorage.imgIndex >= (Image.length-1)) ? 0: parseInt(localStorage.imgIndex)+1;
     		}
-    document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[imgIndex]+'.jpg';
+    document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[localStorage.imgIndex]+'.jpg';
 	} else {
     //LocalStorage not supported with this browser
 	}
-console.log(Image[imgIndex]);
+console.log(localStorage.imgIndex);
 </script>
 
 </body>
