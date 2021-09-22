@@ -17,9 +17,6 @@ BSSS would like to thank<br><img id="myImg" src="https://drive.google.com/uc?exp
 <br>for their support of Thunder Athletics
 	
 <script>
-console.log(localStorage.imgIndex);
-
-
 if (typeof(Storage) !== undefined) {
    	Image[0] = "Knights_of_Columbus";
     	Image[1] = "Baughn_Agency";
@@ -72,7 +69,7 @@ if (typeof(Storage) !== undefined) {
 	
 
     if (!localStorage.imgIndex) {
-     	  localStorage.imgIndex = 0;
+     	  localStorage.imgIndex = 1;
     		} else {
      	  localStorage.imgIndex = (localStorage.imgIndex >= (Image.length-1)) ? 0: parseInt(localStorage.imgIndex)+1;
     		}
