@@ -69,13 +69,13 @@ if (typeof(Storage) !== undefined) {
 	
 
     if (!sessionStorage.imgIndex) {
-     	  sessionStorage.imgIndex = 1;
+     	  sessionStorage.imgIndex = 16;
     		} else {
      	  sessionStorage.imgIndex = (sessionStorage.imgIndex >= (Image.length-1)) ? 0: parseInt(sessionStorage.imgIndex)+1;
     		}
     document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[sessionStorage.imgIndex]+'.jpg';
 	} else {
-    //LocalStorage not supported with this browser
+   dd //LocalStorage not supported with this browser
 	}
 
 </script>
