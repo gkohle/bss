@@ -27,7 +27,7 @@ function clickCounter() {
 <p><button onclick="clickCounter()" type="button">Click me!</button></p>
 <div id="result"></div>
 <p>Click the button to see the counter increase.</p>
-<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+
 
 <div id="Image"></div>
 <b>BSS would like to thank<br><img id="myImg" src="https://gkohle.github.io/bss/" height="180">
@@ -90,7 +90,7 @@ if (typeof(Storage) !== undefined) {
     		} else {
      	  sessionStorage.imgIndex = (sessionStorage.imgIndex >= (Image.length-1)) ? 0: parseInt(sessionStorage.imgIndex)+1;
     		}
-    document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[sessionStorage.imgIndex]+'.jpg';
+    document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[localStorage.clickcount]+'.jpg';
 	} else {
     //local storage not available
 	}
