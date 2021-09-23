@@ -9,6 +9,9 @@ body {position: relative;font-family: Verdana, sans-serif; font-size: 25px; text
 	
 <script>	
 function clickCounter() {
+
+  if (typeof(Storage) !== "undefined") {
+	  var Image = new Array();
 	Image[0] = "Knights_of_Columbus";
     	Image[1] = "Baughn_Agency";
     	Image[2] = "Wainwright_Lumber";
@@ -57,7 +60,6 @@ function clickCounter() {
 	Image[45] = "Wainwright_Dental_Care";
 	Image[46] = "Wainwright_Eyecare";
 	Image[47] = "Western_Financial";
-  if (typeof(Storage) !== "undefined") {	  
     if (localStorage.clickcount) {
       localStorage.clickcount = Number(localStorage.clickcount)+1;
     } else {
@@ -75,8 +77,8 @@ document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_202
 </head>
 
 <body onload="clickCounter()">
-
-<b>BSS would like to thank<br><img id="myImg" height="180">
+<div id="Image"></div>
+<b>BS would like to thank<br><img id="myImg" height="180">
 	<br>for their support of Thunder Athletics</b>
 	
 
