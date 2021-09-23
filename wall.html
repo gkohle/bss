@@ -18,16 +18,13 @@ function clickCounter() {
   } else {
     document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
   }
+document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[localStorage.clickcount]+'.jpg';	
 }
 </script>
 	
 </head>
 
-<body>
-<p><button onclick="clickCounter()" type="button">Click me!</button></p>
-<div id="result"></div>
-<p>Click the button to see the counter increase.</p>
-
+<body onload="clickCounter()">
 
 <div id="Image"></div>
 <b>BSS would like to thank<br><img id="myImg" src="https://gkohle.github.io/bss/" height="180">
@@ -85,7 +82,8 @@ if (typeof(Storage) !== undefined) {
 	Image[46] = "Wainwright_Eyecare";
 	Image[47] = "Western_Financial";
 	
-    if (!sessionStorage.imgIndex) {
+    
+	    if (!sessionStorage.imgIndex) {
      	  sessionStorage.imgIndex = 0;
     		} else {
      	  sessionStorage.imgIndex = (sessionStorage.imgIndex >= (Image.length-1)) ? 0: parseInt(sessionStorage.imgIndex)+1;
