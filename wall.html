@@ -13,11 +13,12 @@ body {position: relative;font-family: Verdana, sans-serif; font-size: 25px; text
 <body>
 
 <div id="Image"></div>
-<b>BSS would like to thank<br><img id="myImg" src="https://gkohle.github.io/bss/" height="180">
+<b>BS would like to thank<br><img id="myImg" src="https://gkohle.github.io/bss/" height="180">
 	<br>for their support of Thunder Athletics</b>
 	
 <script>
 if (typeof(Storage) !== undefined) {
+	
    	Image[0] = "Knights_of_Columbus";
     	Image[1] = "Baughn_Agency";
     	Image[2] = "Wainwright_Lumber";
@@ -76,9 +77,10 @@ if (typeof(Storage) !== undefined) {
     		}
     document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[sessionStorage.imgIndex]+'.jpg';
 	} else {
-   dd //LocalStorage not supported with this browser
+    var imgIndex=100;
 	}
 document.write("your Img number is "+sessionStorage.getitem(imgIndex));
+	
 </script>
 
 </body>
