@@ -4,7 +4,7 @@
 <head>
 
 <style>
-body {position: relative;font-family: Verdana, sans-serif; font-size: 25px; text-align: center; width: 460px}
+body {position: relative;font-family: Verdana, sans-serif; font-size: 25px; text-align: center; width: 480px}
 </style>
 	
 <script>	
@@ -66,7 +66,8 @@ function clickCounter() {
     } else {
       localStorage.clickcount = 1;
     }
-    document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[localStorage.clickcount]+'.jpg';	
+    document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[localStorage.clickcount]+'.jpg';
+    document.getElementById("result").innerHTML = "You have clicked the button " +localStorage.clickcount + " time(s) in this session.";
   } else {
   }
 
@@ -78,9 +79,10 @@ function clickCounter() {
 
 <body onload="clickCounter()">
 <div id="Image"></div>
-<b>BSSS would like to thank<br><img id="myImg" height="180">
+<b>BS would like to thank<br><img id="myImg" height="180">
 	<br>for their support of Thunder Athletics</b>
-	
+
+	<div id="result></div>	
 
 
 </body>
