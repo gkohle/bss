@@ -63,8 +63,11 @@ function clickCounter() {
 
 	if (localStorage.clickcount) {
       localStorage.clickcount = Number(localStorage.clickcount)+1;
+		if (localStorage.clickcount >= (Image.length-1)) {
+			localStorage.clickcount=0;
+		}
     } else {
-      localStorage.clickcount = 1;
+      localStorage.clickcount = 0;
     }
     document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[localStorage.clickcount]+'.jpg';
     document.getElementById("result").innerHTML = "You have clicked the button " +localStorage.clickcount + " time(s) in this session.";
@@ -79,7 +82,7 @@ function clickCounter() {
 
 <body onload="clickCounter()">
 <div id="Image"></div>
-<b>BS would like to thank<br><img id="myImg" height="180">
+<b>BSs would like to thank<br><img id="myImg" height="180">
 	<br>for their support of Thunder Athletics</b>
 
 	<div id="result></div>	
