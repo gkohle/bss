@@ -13,7 +13,7 @@ body {position: relative;font-family: Verdana, sans-serif; font-size: 25px; text
 <body>
 
 <div id="Image"></div>
-<b>BS would like to thank<br><img id="myImg" src="https://gkohle.github.io/bss/" height="180">
+<b>B would like to thank<br><img id="myImg" src="https://gkohle.github.io/bss/" height="180">
 	<br>for their support of Thunder Athletics</b>
 	
 <script>
@@ -77,9 +77,9 @@ if (typeof(Storage) !== undefined) {
     		}
     document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[sessionStorage.imgIndex]+'.jpg';
 	} else {
-    var imgIndex=100;
+    var sessionStorage.imgIndex=100;
 	}
-document.write("your Img number is "+sessionStorage.getitem(imgIndex));
+document.write("your Img number is "+sessionStorage.imgIndex);
 	
 </script>
 
