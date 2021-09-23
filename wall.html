@@ -68,12 +68,12 @@ if (typeof(Storage) !== undefined) {
 	Image[47] = "Western_Financial";
 	
 
-    if (!localStorage.imgIndex) {
-     	  localStorage.imgIndex = 1;
+    if (!sessionStorage.imgIndex) {
+     	  sessionStorage.imgIndex = 1;
     		} else {
-     	  localStorage.imgIndex = (localStorage.imgIndex >= (Image.length-1)) ? 0: parseInt(localStorage.imgIndex)+1;
+     	  sessionStorage.imgIndex = (sessionStorage.imgIndex >= (Image.length-1)) ? 0: parseInt(sessionStorage.imgIndex)+1;
     		}
-    document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[localStorage.imgIndex]+'.jpg';
+    document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[sessionStorage.imgIndex]+'.jpg';
 	} else {
     //LocalStorage not supported with this browser
 	}
