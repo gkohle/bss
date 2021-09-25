@@ -74,20 +74,22 @@ function clickCounter() {
   }
 }
 function createItem() {
-	localStorage.setItem('nameOfItem', 'value'); 
+	localStorage.setItem('counter', '7'); 
 } 
 createItem() // Creates a item named 'nameOfItem' and stores a value of 'value'
 
 function getValue() {
-	return localStorage.getItem('nameOfItem');  
+	return localStorage.getItem('counter');  
 } // Gets the value of 'nameOfItem' and returns it
-console.log(getValue()); //'value';	
+	
+console.log(getValue()); //'value';
+	
 </script>
 </head>
 
 <body onload="clickCounter()">
 <div id="Image"></div>
-<b>BSS would like to thank<br><img id="myImg" height="160">
+<b>BS would like to thank<br><img id="myImg" height="160">
 <br>for their support of <br>Thunder Athletics</b>
 
 </body>
