@@ -12,12 +12,12 @@ function clickCounter() {
 
 	var Image = new Array();
 	Image[0] = "Knights_of_Columbus";
-  Image[1] = "Baughan_Agencies";
-  Image[2] = "Wainwright_Lumber";
-  Image[3] = "PFAD";
-  Image[4] = "Tips";
-  Image[5] = "Assured";
-  Image[6] = "AutographX";
+      	Image[1] = "Baughan_Agencies";
+  	Image[2] = "Wainwright_Lumber";
+  	Image[3] = "PFAD";
+  	Image[4] = "Tips";
+  	Image[5] = "Assured";
+  	Image[6] = "AutographX";
 	Image[7] = "Battle_River_Electric";
 	Image[8] = "Boston_Pizza";
 	Image[9] = "Buffalo_Agencies";
@@ -63,11 +63,13 @@ function clickCounter() {
   return count=localStorage.getItem('counter'); 
   
   count = Number(count)+1;
-	if (count >= (Image.length)) {
-			count=0;
+
+  if (count >= (Image.length)) {
+		count=0;
 		}
-	document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[count]+'.jpg';
-	localStorage.setItem('counter', count); 
+  document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+Image[count]+'.jpg';
+  
+  localStorage.setItem('counter', count); 
 } 
 	
 	
@@ -76,7 +78,7 @@ function clickCounter() {
 
 <body onload="clickCounter()">
 <div id="Image"></div>
-<b>BS would like to thank<br><img id="myImg" height="160">
+<b>BSSS would like to thank<br><img id="myImg" height="160">
 <br>for their support of <br>Thunder Athletics</b>
 
 </body>
