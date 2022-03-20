@@ -3,37 +3,8 @@
 <head>
 
 <style>
-body {position: relative;background-color: white; font-family: Arial, Veranda; font-size: 24px; text-align: center; width: 440px}
-This worked for me (taken from https://gist.github.com/josephwegner/1228975).
+body {position: relative;background-color: white; font-family: Arial, Veranda; font-size: 24px; text-align: center; width: 100%; cursor: none}
 
-Note reference to an html element with id wrapper.
-
-//Requires jQuery - http://code.jquery.com/jquery-1.6.4.min.js
-$(document).ready(function() { 
-
-
-    var idleMouseTimer;
-    var forceMouseHide = false;
-
-    $("body").css('cursor', 'none');
-
-    $("body").mousemove(function(ev) {
-            if(!forceMouseHide) {
-                    $("body").css('cursor', '');
-
-                    clearTimeout(idleMouseTimer);
-
-                    idleMouseTimer = setTimeout(function() {
-                            $("body").css('cursor', 'none');
-
-                            forceMouseHide = true;
-                            setTimeout(function() {
-                                    forceMouseHide = false;
-                            }, 200);
-                    }, 1000);
-            }
-    });
-});
 </style>
 </head>
 
