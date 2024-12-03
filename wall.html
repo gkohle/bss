@@ -16,13 +16,19 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 		
 	</p>
 <script>
-//images are names of files in Support_2021 folder
-	
-var imgIndex = Math.floor( (Math.random() * 60)+1 );	
-document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+imgIndex+'.jpg';
-document.getElementById('myImg').onerror = function() { 
-    document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/you.jpg'; 
-  }
+
+	var count=51;
+
+//images are names of files in Support folder
+for (let i = 0; i < count; i++) {
+//var imgIndex = Math.floor( (Math.random() * 60)+1 );	
+	document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support/'+i+'.jpg';
+	document.getElementById('myImg').onerror = function() { 
+		document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support/you.jpg'; 
+	}
+		if(i==count-1)
+		i=-1;
+}
 </script>
 
 </body>
