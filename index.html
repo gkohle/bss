@@ -18,13 +18,11 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 <script>
 //images are names of files in Support_2021 folder
 	
-var imgIndex = Math.floor( (Math.random() * 50)+1 );	
+var imgIndex = Math.floor( (Math.random() * 60)+1 );	
 document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+imgIndex+'.jpg';
-document.getElementById('myImg').onload = function() { 
-    alert("done"); 
+
 }
 	document.getElementById('myImg').onerror = function() { 
-    alert("Inserting alternate");
     document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/you.jpg'; 
   }
 </script>
