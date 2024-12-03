@@ -18,6 +18,7 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 <script>
 
 	var count=51;
+	var i=0;
 
 //images are names of files in Support folder
 for (let i = 0; i < count; i++) {
@@ -26,8 +27,9 @@ for (let i = 0; i < count; i++) {
 	document.getElementById('myImg').onerror = function() { 
 		document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support/you.jpg'; 
 	}
-		if(i==count-1)
+		if(i==count-1){
 		i=-1;
+		}
 }
 </script>
 
