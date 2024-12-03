@@ -11,16 +11,22 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 <body>
 
 <div id="Image"></div>
-	<p><b><font color="black">BSS wants to thank</b><br><img  img id="myImg" height="160">
+	<p><b><font color="black">BSS wants to thank</b><br><img id="myImg" height="160">
 		<br><b>for their support of <br><font color="blue">Thunder Athletics</b><br>
 		
 	</p>
 <script>
 //images are names of files in Support_2021 folder
 	
-var imgIndex = Math.floor( (Math.random() * 5)+1 );	
+var imgIndex = Math.floor( (Math.random() * 50)+1 );	
 document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+imgIndex+'.jpg';
-
+document.getElementById('myImg').onload = function() { 
+    alert("done"); 
+}
+	document.getElementById('myImg').onerror = function() { 
+    alert("Inserting alternate");
+    document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/you.jpg'; 
+  }
 </script>
 
 </body>
