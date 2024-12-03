@@ -22,7 +22,8 @@ var ImageNumber = 51;
 //images are number names of files in Support folder
 
 //var imgIndex = Math.floor( 'count' );
-document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support/'+`${count}`+'.jpg';
+	var str = count.toString();
+document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support/'+str+'.jpg';
 	
 document.getElementById('myImg').onerror = function() { 
 		document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support/you.jpg'; 
@@ -30,7 +31,7 @@ document.getElementById('myImg').onerror = function() {
 
 function myCount() {
       let count = Number(localStorage.getItem('count')) || 0;
-      alert(`count ${count}` );
+      alert(`count    ${count}` );
 	//alert( `imgIndex`+imgIndex);
 	if (count >= ImageNumber) {
 		count = 0
