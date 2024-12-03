@@ -10,3 +10,5 @@ Edit the code in INDEX.HTML (by clicking on pencil in upper right corner), the I
 There is an extra "you.jpg" in the Support folder to play if image is having trouble or missing.
 
 The Wall.html and Wall2.html was practice files to the code and not used for the display of the images.
+
+The List of Images and numbers can be found on Google Sheets https://docs.google.com/spreadsheets/d/1UWC4-5uXjXxs1fNxtUn4Ec7h9QWv5QBvSFUYja10f8E/edit?usp=sharing
