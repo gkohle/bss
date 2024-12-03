@@ -1,89 +1,29 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 
 <style>
-body {position: relative; background-color: white; font-family: Verdana, sans-serif; font-size: 24px; text-align: center; width: 440px}
+body {position: relative;background-color: white; font-family: Arial, Veranda; font-size: 24px; text-align: center; width: 440px}
+
 </style>
-	
-<script>	
-function clickCounter() {
-
-  if (typeof(Storage) !== "undefined") {
-	  var Image = new Array();
-	Image[0] = "1";
-    	Image[1] = "2";
-    	Image[2] = "3";
-    	Image[3] = "4";
-    	Image[4] = "5";
-    	Image[5] = "6";
-    	Image[6] = "7";
-	Image[7] = "8";
-	Image[8] = "9";
-	Image[9] = "10";
-	Image[10] = "11";
-	Image[11] = "12";
-	Image[12] = "13";
-	Image[13] = "14";
-	Image[14] = "15";
-	Image[15] = "16";
-	Image[16] = "17";
-	Image[17] = "18";
-	Image[18] = "19";
-	Image[19] = "20";
-	Image[20] = "21";
-	Image[21] = "22";
-	Image[22] = "23";
-	Image[23] = "24";
-	Image[24] = "25";
-	Image[25] = "26";
-	Image[26] = "27";
-	Image[27] = "28";
-	Image[28] = "29";
-	Image[29] = "30";
-	Image[30] = "31";
-	Image[31] = "32";
-	Image[32] = "33";
-	Image[33] = "34";
-	Image[34] = "35";
-	Image[35] = "36";
-	Image[36] = "37";
-	Image[37] = "38";
-	Image[38] = "39";
-	Image[39] = "40";
-	Image[40] = "41";
-	Image[41] = "42";
-	Image[42] = "43";
-	Image[43] = "44";
-	Image[44] = "45";
-	Image[45] = "46";
-	Image[46] = "47";
-	Image[47] = "48";
-	Image[48] = "49";
-	Image[49] = "50";  
-
-	if (sessionStorage.clickcount) {
-      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
-		if (sessionStorage.clickcount >= (Image.length)) {
-			sessionStorage.clickcount=0;
-		}
-    } else {
-      sessionStorage.clickcount = 0;
-    }
-    document.getElementById('myImg').src = 'https://drive.google.com/drive/folders/13693TuX9g_Btoen0FGjTm0jSSUiZkQ_Z/'+Image[2]+'.jpg';
-  } else {
-  }
-}
-
-	
-</script>
 </head>
 
-<body onload="clickCounter()">
+<body>
+
 <div id="Image"></div>
-<b>BSS would like to thank<br><img id="myImg" height="160">
-<br>for their support of <br>Thunder Athletics</b>
+	<p><b><font color="black">BSS wants to thank</b><br><img id="myImg" height="160">
+		<br><b>for their support of <br><font color="blue">Thunder Athletics</b><br>
+		
+	</p>
+<script>
+//images are names of files in Support_2021 folder
+	
+var imgIndex = Math.floor( (Math.random() * 60)+1 );	
+document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/'+imgIndex+'.jpg';
+document.getElementById('myImg').onerror = function() { 
+    document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support_2021/you.jpg'; 
+  }
+</script>
 
 </body>
 </html>
