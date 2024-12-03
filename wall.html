@@ -8,7 +8,7 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 </style>
 </head>
 
-<body>
+<body onload="myCount()">
 
 <div id="Image"></div>
 	<p><b><font color="black">BSS wants to thank</b><br><img id="myImg" height="160">
@@ -16,21 +16,22 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 		
 	</p>
 <script>
-
-	var count=51;
-	var i=0;
+var ImageNumber = 51;
 
 //images are names of files in Support folder
-for (let i = 0; i < count; i++) {
+
 //var imgIndex = Math.floor( (Math.random() * 60)+1 );	
 	document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support/'+i+'.jpg';
 	document.getElementById('myImg').onerror = function() { 
 		document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support/you.jpg'; 
 	}
-		if(i==count-1){
-		i=-1;
-		}
-}
+function myCount() {
+      let count = Number(localStorage.getItem('count')) || 0;
+      alert(`count ${count}`);
+      localStorage.setItem('count', count + 1);
+
+    }
+
 </script>
 
 </body>
