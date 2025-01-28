@@ -22,8 +22,7 @@
                 localStorage.setItem('currentNumber', currentNumber + 1);
                 currentNumber++;
             } else {
-                document.getElementById('numberDisplay').textContent = "Sequence Complete!";
-                localStorage.removeItem('currentNumber'); // Reset after the sequence is complete
+                       localStorage.removeItem('currentNumber'); // Reset after the sequence is complete
             }
         }
 
