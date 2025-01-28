@@ -25,13 +25,13 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
   let currentIndex = Math.floor( (Math.random() * totalImages)+1 );	
 
   function displayNextNumber() {
-        	document.getElementById('numberDisplay').textContent = currentIndex;
+        	document.getElementById('myImg').textContent = currentIndex;
      		currentIndex = currentIndex >= totalImages ? 1 : currentIndex + 1;
             
     	// Set the new image source
     		const imgElement = document.getElementById("myImg");
     		imgElement.src = `${folder}/${currentIndex}.jpg`;
-	  	document.getElementById('numberDisplay').textContent = currentIndex;
+	  	document.getElementById('myImg').textContent = currentIndex;
 		}
 // Display the next number every 3 seconds
         setInterval(displayNextNumber, 3000);
