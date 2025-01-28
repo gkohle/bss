@@ -24,7 +24,7 @@
   <div id="number">1</div>
 
   <script>
-    let currentNumber = 1;
+    let currentNumber = Math.floor(Math.random() * 50) + 1;
 
     function updateNumber() {
       const numberElement = document.getElementById('number');
@@ -39,3 +39,4 @@
   </script>
 </body>
 </html>
+
