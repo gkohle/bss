@@ -12,7 +12,7 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 <body>
 	<p><b><font color="black">BSS wants to thank</b><br><img id="image" height="160">
 	<br><b>for their support of <br><font color="blue">Thunder Athletics</b><br>
-		echo currentIndex;
+		<h1>Random Number: <span id="numberDisplay">0</span></h1>
 	</p>
 	
   <script>
@@ -30,6 +30,7 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
     // Set the new image source
     const imgElement = document.getElementById("image");
     imgElement.src = `${folder}/${currentIndex}.jpg`;
+	  document.getElementById('numberDisplay').textContent = currentIndex;
 
     // Update the index for the next load
     currentIndex = currentIndex >= totalImages ? 1 : currentIndex + 1;
