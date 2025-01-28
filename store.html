@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Value in Browser</title>
+</head>
+<body>
+  <h1>Stored Value: <span id="storedValue">None</span></h1>
+  <input type="text" id="inputValue" placeholder="Enter value to store">
+  <button onclick="storeValue()">Store Value</button>
+
+  <script>
+    // Function to get the stored value from localStorage and display it
+    function displayStoredValue() {
+      const storedValue = localStorage.getItem('storedValue');
+      if (storedValue) {
+        document.getElementById('storedValue').textContent = storedValue;
+      } else {
+        document.getElementById('storedValue').textContent = 'None';
+      }
+    }
+
+    // Function to store the input value in localStorage
+    function storeValue() {
+      const inputValue = document.getElementById('inputValue').value;
+      if (inputValue) {
+        localStorage.setItem('storedValue', inputValue);
+        displayStoredValue(); // Update the displayed value
+      } else {
+        alert("Please enter a value to store!");
+      }
+    }
+
+    // Display the stored value when the page loads
+    window.onload = displayStoredValue;
+  </script>
+</body>
+</html>
