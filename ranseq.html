@@ -22,7 +22,7 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
     const totalImages = 46;
 
     // Get the current image index to random number
-  var currentIndex = Math.floor( (Math.random() * imageNumber)+1 );	
+  let currentIndex = Math.floor( (Math.random() * totalImages)+1 );	
 
   function displayNextNumber() {
 
@@ -37,9 +37,6 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 }
 	          // Display the next number every 2 seconds
         setInterval(displayNextNumber, 2000);
-
-        // Initially call the function to display the first number
-        displayNextNumber();
 </script>
 
 </body>
