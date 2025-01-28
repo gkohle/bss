@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body {position: relative;background-color: white; font-family: Arial, Veranda; font-size: 24px; text-align: center; width: 440px}
+
+</style>
+</head>
+
+<body>
+
+<div id="Image"></div>
+	<p><b><font color="black">BSS wants to thank</b><br><img id="myImg" height="160">
+		<br><b>for their support of <br><font color="blue">Thunder Athletics</b><br>
+		
+	</p>
+<script>
+      // Refresh the page
+	  setTimeout(function(){
+    		location.reload();
+		}, 1000);
+//images are names of files in Support_2021 folder
+var imageNumber = 46;	
+var imgIndex = Math.floor( (Math.random() * imageNumber)+1 );	
+document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support/'+imgIndex+'.jpg';
+document.getElementById('myImg').onerror = function() { 
+    document.getElementById('myImg').src = 'https://gkohle.github.io/bss/Support/you.jpg'; 
+  }
+</script>
+
+</body>
+</html>
