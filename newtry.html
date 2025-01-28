@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sequential Number Display</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    #number {
+      font-size: 5rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="number">1</div>
+
+  <script>
+    let currentNumber = 1;
+
+    function updateNumber() {
+      const numberElement = document.getElementById('number');
+      numberElement.textContent = currentNumber;
+
+      // Increment the number and reset to 1 if it exceeds 50
+      currentNumber = currentNumber < 50 ? currentNumber + 1 : 1;
+    }
+
+    // Update the number every 1 second (1000ms)
+    setInterval(updateNumber, 1000);
+  </script>
+</body>
+</html>
