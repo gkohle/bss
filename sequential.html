@@ -25,21 +25,16 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
     let currentIndex = parseInt(localStorage.getItem('currentImageIndex')) || 1;
 
     function displayNextNumber() {
-            if (currentIndex <= totalImages) {
+
                 document.getElementById('numberDisplay').textContent = currentIndex;
-                // Save the current number for the next time the page is loaded
-                localStorage.setItem('currentImageIndex', currentIndex + 1);
-                currentIndex++;
-            }
+     		currentIndex = currentIndex >= totalImages ? 1 : currentIndex + 1;
+   		localStorage.setItem('currentImageIndex', currentIndex);
+            
     // Set the new image source
     const imgElement = document.getElementById("image");
     imgElement.src = `${folder}/${currentIndex}.jpg`;
 	  document.getElementById('numberDisplay').textContent = currentIndex;
-
-    // Update the index for the next load
-    currentIndex = currentIndex >= totalImages ? 1 : currentIndex + 1;
-    localStorage.setItem('currentImageIndex', currentIndex);
-
+}
 	          // Display the next number every 2 seconds
         setInterval(displayNextNumber, 2000);
 
