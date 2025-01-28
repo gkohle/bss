@@ -13,7 +13,7 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 <div id="Image"></div>
 	<p><b><font color="black">BSS wants to thank</b><br><img id="myImg" alt="Image" onerror="this.onerror=null; this.src='https://gkohle.github.io/bss/Support/you.jpg';"height="160">
 		<br><b>for their support of <br><font color="blue">Thunder Athletics</b><br>
-		<b>Number: <span id="numberDisplay">0</span></b>
+
 	</p>
 <script>
 //images are names of files in Support_2021 folder
@@ -28,14 +28,14 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
         	document.getElementById('numberDisplay').textContent = currentIndex;
      		currentIndex = currentIndex >= totalImages ? 1 : currentIndex + 1;
             
-    		// Set the new image source
+    	// Set the new image source
     		const imgElement = document.getElementById("myImg");
     		imgElement.src = `${folder}/${currentIndex}.jpg`;
 	  	document.getElementById('numberDisplay').textContent = currentIndex;
 		}
-	          // Display the next number every 3 seconds
+// Display the next number every 3 seconds
         setInterval(displayNextNumber, 3000);
-	  // Initially call the function to display the first number
+// Initially call the function to display the first number
 	displayNextNumber();
 </script>
 
