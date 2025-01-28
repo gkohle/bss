@@ -25,16 +25,17 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
   let currentIndex = Math.floor( (Math.random() * totalImages)+1 );	
 
   function displayNextNumber() {
-        document.getElementById('myImg').textContent = currentIndex;
+        	document.getElementById('myImg').textContent = currentIndex;
      		currentIndex = currentIndex >= totalImages ? 1 : currentIndex + 1;
             
-    // Set the new image source
-    const imgElement = document.getElementById("myImg");
-    imgElement.src = `${folder}/${currentIndex}.jpg`;
-	  document.getElementById('myImg').textContent = currentIndex;
-}
+    		// Set the new image source
+    		const imgElement = document.getElementById("myImg");
+    		imgElement.src = `${folder}/${currentIndex}.jpg`;
+	  	document.getElementById('myImg').textContent = currentIndex;
+		}
 	          // Display the next number every 2 seconds
         setInterval(displayNextNumber, 2000);
+	  // Initially call the function to display the first number
 	displayNextNumber();
 </script>
 
