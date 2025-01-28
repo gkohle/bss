@@ -28,7 +28,7 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
             if (currentIndex <= totalImages) {
                 document.getElementById('numberDisplay').textContent = currentIndex;
                 // Save the current number for the next time the page is loaded
-                localStorage.setItem('currentIndex', currentIndex + 1);
+                localStorage.setItem('currentImageIndex', currentIndex + 1);
                 currentIndex++;
             }
     // Set the new image source
