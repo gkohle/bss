@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body {position: relative;background-color: white; font-family: Arial, Veranda; font-size: 24px; text-align: center; width: 440px}
+</style>
+</head>
+<body>
+
+<div id="Image"></div>
+	<p><b><font color="black">BSS wants to thank</b><br><img id="myImg" height="160">
+		<br><b>for their support of <br><font color="blue">Thunder Athletics</b><br>
+	</p>
+
+<script>
+    fetch('https://script.google.com/macros/s/AKfycbxIg5ijMN4wyKk-lgVjKAjAM3fjhmgexEC5kWCPLOieE4kTfv6JefgMonQOGat-8yI0/exec')
+ .then(response => response.text())
+        .then(imageUrl => {
+            document.getElementById("myImg").src = imageUrl;
+        })
+        .catch(error => console.error('Error fetching image:', error));
+</script>
+
+</body>
+</html>
