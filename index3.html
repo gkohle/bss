@@ -21,11 +21,10 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
     const totalImages = 46;
 
 // set the current index to random number 
-  let currentIndex = Math.floor( (Math.random() * totalImages)+1 );	
-
+ 
   function displayNextNumber() {
         	document.getElementById('myImg').textContent = currentIndex;
-     		currentIndex = currentIndex >= totalImages ? 1 : currentIndex + 1;
+     		currentIndex = Math.floor( (Math.random() * totalImages)+1 );
             
     	// Set the new image source
     		const imgElement = document.getElementById("myImg");
