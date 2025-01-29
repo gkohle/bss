@@ -4,24 +4,22 @@
 
 <style>
 body {position: relative;background-color: white; font-family: Arial, Veranda; font-size: 24px; text-align: center; width: 440px}
-
 </style>
 </head>
-
 <body>
 
 <div id="Image"></div>
 	<p><b><font color="black">BSS wants to thank</b><br><img id="myImg" height="160">
 		<br><b>for their support of <br><font color="blue">Thunder Athletics</b><br>
-
 	</p>
+	
 <script>
+	
 //images are names of files in Support_2021 folder
-
     const folder = "https://gkohle.github.io/bss/Support";
     const totalImages = 46;
 
-    // Get the current image index to random number
+// set the current index to random number 
   let currentIndex = Math.floor( (Math.random() * totalImages)+1 );	
 
   function displayNextNumber() {
@@ -37,6 +35,7 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
         setInterval(displayNextNumber, 2000);
 // Initially call the function to display the first number
 	displayNextNumber();
+	
 </script>
 </body>
 </html>
