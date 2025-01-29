@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,12 +15,16 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 	</p>
 
 <script>
+function newImage() {
     fetch('https://script.google.com/macros/s/AKfycbxIg5ijMN4wyKk-lgVjKAjAM3fjhmgexEC5kWCPLOieE4kTfv6JefgMonQOGat-8yI0/exec')
  .then(response => response.text())
         .then(imageUrl => {
             document.getElementById("myImg").src = imageUrl;
         })
         .catch(error => console.error('Error fetching image:', error));
+}
+	setInterval(newImage, 2000);
+	newImage();
 </script>
 
 </body>
