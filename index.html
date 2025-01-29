@@ -31,8 +31,8 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
     		imgElement.src = `${folder}/${currentIndex}.jpg`;
 	  	document.getElementById('myImg').textContent = currentIndex;
 		}
-// Display the next number every 3 seconds
-        setInterval(displayNextNumber, 2000);
+// Display the next number every 2.05 seconds (0.05 prevents a sixth image flashing on before 10 seconds done)
+        setInterval(displayNextNumber, 2050);
 // Initially call the function to display the first number
 	displayNextNumber();
 	
