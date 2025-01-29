@@ -12,6 +12,7 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 <div id="Image"></div>
 	<p><b><font color="black">BSS wants to thank</b><br><img id="myImg" height="160">
 		<br><b>for their support of <br><font color="blue">Thunder Athletics</b><br>
+		<b>Number: <span id="numberDisplay">0</span></b>
 	</p>
 	
 <script>
@@ -23,13 +24,13 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 // set the current index to random number 
  
   function displayNextNumber() {
-        	document.getElementById('myImg').textContent = currentIndex;
+        	document.getElementById('displayNumber').textContent = currentIndex;
      		currentIndex = Math.floor( (Math.random() * totalImages)+1 );
             
     	// Set the new image source
     		const imgElement = document.getElementById("myImg");
     		imgElement.src = `${folder}/${currentIndex}.jpg`;
-	  	document.getElementById('myImg').textContent = currentIndex;
+	  	document.getElementById('displayNumber').textContent = currentIndex;
 		}
 // Display the next number every 2.05 seconds (0.05 prevents a sixth image flashing on before 10 seconds done)
         setInterval(displayNextNumber, 2050);
