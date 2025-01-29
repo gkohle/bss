@@ -12,28 +12,23 @@ body {position: relative;background-color: white; font-family: Arial, Veranda; f
 <div id="Image"></div>
 	<p><b><font color="black">BSS wants to thank</b><br><img id="myImg" height="160">
 		<br><b>for their support of <br><font color="blue">Thunder Athletics</b><br>
-		<b>Number: <span id="numberDisplay">0</span></b>
 	</p>
-	
 <script>
 	
 //images are names of files in Support_2021 folder
     const folder = "https://gkohle.github.io/bss/Support";
     const totalImages = 46;
 
-
- 
-  function displayNextNumber() {
-	  // set the current index to random number 
-     		currentIndex = Math.floor( (Math.random() * totalImages)+1 );
-            
+//code to display randomly five sequential images
+  function displayImage() {
+	// set the current index to random number 
+     		currentIndex = Math.floor( (Math.random() * totalImages)+1 );          
     	// Set the new image source
     		const imgElement = document.getElementById("myImg");
     		imgElement.src = `${folder}/${currentIndex}.jpg`;
-	  document.getElementById('numberDisplay').textContent = currentIndex;
 		}
 // Display the next number every 2.05 seconds (0.05 prevents a sixth image flashing on before 10 seconds done)
-        setInterval(displayNextNumber, 2050);
+        setInterval(displayImage, 2050);
 // Initially call the function to display the first number
 	displayNextNumber();
 	
